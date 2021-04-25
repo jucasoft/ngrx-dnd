@@ -9,7 +9,7 @@ import {RootStoreState} from '@root-store/index';
 })
 export class HomeMainComponent implements OnInit {
 
-  title = 'ngrx-entity-crud-prime-ng-boilerplate';
+  title = 'ngrx-dnd';
 
   constructor(private readonly store$: Store<RootStoreState.State>) {
   }

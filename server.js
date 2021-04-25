@@ -7,13 +7,13 @@ const middlewares = jsonServer.defaults();
 
 const api = '/api/v1';
 // Serve static files....
-server.use(express.static(__dirname + '/dist/ngrx-entity-crud-prime-ng-boilerplate'));
+server.use(express.static(__dirname + '/dist/ngrx-dnd'));
 
 server.use(api, middlewares);
 server.use(api, router);
 
 server.get('**', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/ngrx-entity-crud-prime-ng-boilerplate/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/ngrx-dnd/index.html'));
 });
 
 router.render = (req, res) => {

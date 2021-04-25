@@ -1,4 +1,4 @@
-# ngrx-entity-crud-prime-ng-boilerplate
+# ngrx-dnd
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 # How to use it?

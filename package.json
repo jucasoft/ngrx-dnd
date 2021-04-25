@@ -1,5 +1,5 @@
 {
-  "name": "ngrx-entity-crud-prime-ng-boilerplate",
+  "name": "ngrx-dnd",
   "version": "11.6.0",
   "scripts": {
     "ng": "ng",
