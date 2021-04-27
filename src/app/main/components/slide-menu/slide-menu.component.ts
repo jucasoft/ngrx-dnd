@@ -8,7 +8,7 @@ import {menuItemsDecorator} from '@root-store/slide-menu-store/operators';
 @Component({
   selector: 'app-slide-menu',
   template: `
-    <div class="slide-header"><i class="fas fa-heart"></i> Menù</div>
+    <div class="slide-header"><i class="fas fa-hat-wizard"></i> ngrx-dnd</div>
     <!--    <p-panelMenu [model]="items" [style.width.%]="100"></p-panelMenu>-->
     <p-scrollPanel #scrollPanel [style]="{height: '100%'}">
       <p-menu [model]="items$ | async" styleClass="slide-menu" [style.width.%]="100"></p-menu>
