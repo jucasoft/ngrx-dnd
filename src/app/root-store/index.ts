@@ -9,3 +9,4 @@ export * from './slide-menu-store';
 
 export * from './spell-store';
 export * from './spell-board-store';
+export * from './auth-store';

@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^11.2.11",
     "@angular/platform-browser-dynamic": "^11.2.11",
     "@angular/router": "^11.2.11",
+    "@auth0/auth0-angular": "^1.4.1",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@ngrx/effects": "^11.1.1",
     "@ngrx/entity": "^11.1.1",

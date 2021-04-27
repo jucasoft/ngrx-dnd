@@ -9,6 +9,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {SlideMenuStoreModule} from '@root-store/slide-menu-store';
 import { SpellStoreModule } from '@root-store/spell-store';
 import { SpellBoardStoreModule } from '@root-store/spell-board-store';
+import { AuthStoreModule } from '@root-store/auth-store';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { SpellBoardStoreModule } from '@root-store/spell-board-store';
     }),
     SpellStoreModule,
     SpellBoardStoreModule,
+    AuthStoreModule,
   ],
   declarations: []
 })

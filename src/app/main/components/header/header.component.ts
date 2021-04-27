@@ -10,7 +10,8 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
         </div>
       </div>
       <div class="p-col text-align-right">
-        <em class="fas fa-2x fa-user fa-button p-1" style="color: #FFF;"></em>
+<!--        <em class="fas fa-2x fa-user fa-button p-1" style="color: #FFF;"></em>-->
+        <app-login></app-login>
       </div>
     </div>
   `,
