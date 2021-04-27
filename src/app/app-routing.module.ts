@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 
-const routes: Routes = [{path: '', redirectTo: 'home', pathMatch: 'full'}, {path: 'home', loadChildren: () => import('./main/views/home/home.module').then(m => m.HomeModule)}, {path: 'spell', loadChildren: () => import('./main/views/spell/spell.module').then(m => m.SpellModule)},];
+const routes: Routes = [{path: '', redirectTo: 'home', pathMatch: 'full'}, {path: 'home', loadChildren: () => import('./main/views/home/home.module').then(m => m.HomeModule)}, {path: 'spell', loadChildren: () => import('./main/views/spell/spell.module').then(m => m.SpellModule)}, {path: 'spell-board', loadChildren: () => import('./main/views/spell-board/spell-board.module').then(m => m.SpellBoardModule)},];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { enableTracing: false, relativeLinkResolution: 'legacy' })],
