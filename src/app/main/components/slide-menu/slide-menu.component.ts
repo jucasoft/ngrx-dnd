@@ -9,12 +9,25 @@ import {menuItemsDecorator} from '@root-store/slide-menu-store/operators';
   selector: 'app-slide-menu',
   template: `
     <div class="slide-header"><i class="fas fa-hat-wizard"></i> ngrx-dnd</div>
-    <!--    <p-panelMenu [model]="items" [style.width.%]="100"></p-panelMenu>-->
     <p-scrollPanel #scrollPanel [style]="{height: '100%'}">
       <p-menu [model]="items$ | async" styleClass="slide-menu" [style.width.%]="100"></p-menu>
     </p-scrollPanel>
   `,
-  styles: [],
+  styles: [`
+    .p-menu {
+      padding: 0.25rem 0;
+      background: unset;
+      color: rgba(255, 255, 255, 0.87);
+      border: unset;
+      border-radius: 3px;
+      width: unset;
+    }
+
+    .p-menu .p-menuitem {
+      border-bottom: 1px solid #5c5c5c;
+    }
+
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })
@@ -28,7 +41,6 @@ export class SlideMenuComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
   }
 
-  // todo: completare profilazione dei pulsanti.
   ngOnInit(): void {
     this.items$ = this.store$.pipe(
       select(SlideMenuStoreSelectors.selectItems),
