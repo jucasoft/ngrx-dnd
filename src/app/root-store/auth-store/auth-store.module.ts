@@ -18,11 +18,6 @@ export const INJECTION_TOKEN = new InjectionToken<ActionReducer<Profile>>(`${Nam
     CommonModule,
     StoreModule.forFeature(Names.NAME, INJECTION_TOKEN),
     EffectsModule.forFeature([AuthStoreEffects]),
-    AuthModule.forRoot({
-      domain: 'dev-6fz-frdk.eu.auth0.com',
-      clientId: '6zPs46s81ROJrsiWmoWtzsZia7e5W9R3',
-      redirectUri: window.location.origin,
-    }),
     LoginModule,
   ],
   declarations: [],

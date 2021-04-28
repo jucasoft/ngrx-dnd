@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RootStoreModule} from './root-store';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ConfirmationService} from 'primeng/api';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
@@ -15,6 +15,7 @@ import {NgLetModule} from '@core/directive/ng-let.directive';
 import {BreadcrumbModule} from '@components/breadcrumb/breadcrumb.module';
 import {ClickOutsideModule} from '@core/directive/click-outside-directive';
 import {CardModule} from 'primeng/card';
+import {AuthHttpInterceptor, AuthModule} from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [
@@ -34,9 +35,24 @@ import {CardModule} from 'primeng/card';
     ProgressModule,
     BreadcrumbModule,
     ClickOutsideModule,
-    CardModule
+    CardModule,
+    AuthModule.forRoot({
+      domain: '',
+      clientId: '',
+      redirectUri: window.location.origin,
+      // The AuthHttpInterceptor configuration
+      httpInterceptor: {
+        allowedList: [
+          '/api',
+          '/api/*',
+        ],
+      },
+    }),
   ],
-  providers: [ConfirmationService],
+  providers: [
+    ConfirmationService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
