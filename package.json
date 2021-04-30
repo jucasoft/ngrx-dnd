@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "start:dev": "ng serve --proxy-config proxy.conf.js",
-    "build": "ng build --aot --prod",
+    "start:dev": "npm run env && ng serve --proxy-config proxy.conf.js",
+    "build": "npm run env && ng build --aot --prod",
+    "env": "ts-node ./setenv.ts",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -50,6 +51,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.20.10",
     "codelyzer": "^6.0.0",
+    "dotenv": "^8.2.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.2.3",

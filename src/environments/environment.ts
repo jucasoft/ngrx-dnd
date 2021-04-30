@@ -2,7 +2,10 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {environmentBase} from './environment.base';
+
 export const environment = {
+  ...environmentBase,
   production: false,
   webServiceUri: '/api/v1/'
 };

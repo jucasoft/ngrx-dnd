@@ -7,12 +7,16 @@ const middlewares = jsonServer.defaults();
 const cors = require('cors');
 const jwt = require('express-jwt');
 const jwksRsa = require('jwks-rsa');
+require('dotenv').config();
 
 const authConfig = {
-  domain: '',
-  audience: '',
+  domain: process.env.DOMAIN,
+  audience: process.env.CLIENT_ID,
   appUri: 'http://localhost:4200',
 };
+
+console.log('authConfig.domain', authConfig.domain);
+console.log('authConfig.audience', authConfig.audience);
 
 if (!authConfig.domain || !authConfig.audience) {
   throw 'Please make sure that auth_config.json is in place and populated';
@@ -41,7 +45,7 @@ server.use(
   })
 );
 
-server.use(api, checkJwt);
+server.use('/api/v2', checkJwt);
 server.use(api, middlewares);
 server.use(api, router);
 
@@ -55,6 +59,6 @@ router.render = (req, res) => {
   })
 };
 
-server.listen(process.env.PORT || 3000, (res) => {
-  console.log('JSON Server is running on: http://localhost:3000');
+server.listen(process.env.PORT, (res) => {
+  console.log('JSON Server is running on: http://localhost:' + process.env.PORT);
 });

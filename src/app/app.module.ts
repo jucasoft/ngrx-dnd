@@ -16,6 +16,7 @@ import {BreadcrumbModule} from '@components/breadcrumb/breadcrumb.module';
 import {ClickOutsideModule} from '@core/directive/click-outside-directive';
 import {CardModule} from 'primeng/card';
 import {AuthHttpInterceptor, AuthModule} from '@auth0/auth0-angular';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,8 @@ import {AuthHttpInterceptor, AuthModule} from '@auth0/auth0-angular';
     ClickOutsideModule,
     CardModule,
     AuthModule.forRoot({
-      domain: '',
-      clientId: '',
+      domain: environment.DOMAIN,
+      clientId: environment.CLIENT_ID,
       redirectUri: window.location.origin,
       // The AuthHttpInterceptor configuration
       httpInterceptor: {
