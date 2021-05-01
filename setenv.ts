@@ -12,6 +12,7 @@ export const environmentBase = {
   DOMAIN: '${process.env.DOMAIN}'
 };
 `;
+console.log('environmentFileContent', environmentFileContent);
 // write the content to the respective file
 writeFile(targetPath, environmentFileContent, (err) => {
   if (err) {
