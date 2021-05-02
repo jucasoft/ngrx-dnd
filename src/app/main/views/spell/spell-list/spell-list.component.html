@@ -23,6 +23,9 @@
       <th style="width: 3rem">
       </th>
       <th>
+        qt
+      </th>
+      <th>
         name
       </th>
       <th>
@@ -37,6 +40,8 @@
       <th style="width: 10em">actions</th>
     </tr>
     <tr>
+      <th>
+      </th>
       <th>
       </th>
       <th>
@@ -58,6 +63,18 @@
     <tr>
       <td>
         <p-tableCheckbox [value]="item"></p-tableCheckbox>
+      </td>
+      <td>
+        <p-inputNumber [showButtons]="true"
+                       buttonLayout="horizontal"
+                       spinnerMode="horizontal"
+                       size="1"
+                       decrementButtonClass="p-button-danger"
+                       incrementButtonClass="p-button-success"
+                       incrementButtonIcon="pi pi-plus"
+                       decrementButtonIcon="pi pi-minus"
+                       mode="decimal">
+        </p-inputNumber>
       </td>
       <td>
         {{item.name}}

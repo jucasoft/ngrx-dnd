@@ -18,6 +18,7 @@ import {ButtonCreateManyTestSpellComponent} from './components/button-create-man
 import {NgLetModule} from '@core/directive/ng-let.directive';
 import {ToolbarModule} from 'primeng/toolbar';
 import {DropdownModule} from 'primeng/dropdown';
+import {InputNumberModule} from 'primeng/inputnumber';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {DropdownModule} from 'primeng/dropdown';
         SearchModule,
         NgLetModule,
         ToolbarModule,
-        DropdownModule
+        DropdownModule,
+        InputNumberModule
     ],
   providers: [],
   entryComponents: []
