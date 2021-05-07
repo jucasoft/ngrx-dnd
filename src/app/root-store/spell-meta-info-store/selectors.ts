@@ -20,4 +20,7 @@ export const {
   selectIdSelected,
   selectIdsSelected,
   selectResponses,
+  selectEntitiesSelected,
+  selectItemSelectedOrigin,
+  selectItemsSelectedOrigin
 } = adapter.getCrudSelectors(selectState);

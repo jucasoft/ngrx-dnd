@@ -76378,9 +76378,66 @@
     }
   ],
   "spell-board": [
-
+    {
+      "id": 1,
+      "name": "sdsdf",
+      "calss": "Cleric"
+    },
+    {
+      "id": 2,
+      "name": "sdsdf",
+      "calss": "Cleric"
+    },
+    {
+      "id": 3,
+      "name": "sdsdf",
+      "calss": "Paladin"
+    },
+    {
+      "id": 4,
+      "name": "sdsdf",
+      "calss": "Savant"
+    },
+    {
+      "id": 5,
+      "name": "edited 53",
+      "calss": "edited 53"
+    },
+    {
+      "id": 6,
+      "name": "edited 53",
+      "calss": "edited 53"
+    },
+    {
+      "id": 7,
+      "name": "edited 53",
+      "calss": "edited 53"
+    },
+    {
+      "id": 8,
+      "name": "edited 53",
+      "calss": "edited 53"
+    },
+    {
+      "id": 9,
+      "name": "edited 56",
+      "calss": "edited 56"
+    },
+    {
+      "id": 10,
+      "name": "edited 56",
+      "calss": "edited 56"
+    },
+    {
+      "id": 11,
+      "name": "edited 56",
+      "calss": "edited 56"
+    },
+    {
+      "id": 12,
+      "name": "edited 56",
+      "calss": "edited 56"
+    }
   ],
-  "spell-meta-info": [
-
-  ]
+  "spell-meta-info": []
 }

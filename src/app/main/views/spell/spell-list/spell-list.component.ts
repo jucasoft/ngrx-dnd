@@ -6,6 +6,7 @@ import {RouterStoreActions} from '@root-store/router-store/index';
 import {ConfirmationService} from 'primeng/api';
 import {PopUpData} from '@root-store/router-store/pop-up-base.component';
 import {Table} from 'primeng/table';
+import {Dictionary} from '@ngrx/entity';
 
 @Component({
   selector: 'app-spell-list',
@@ -25,8 +26,14 @@ export class SpellListComponent implements OnInit {
     this._itemsSelected = value;
   }
 
+  @Input()
+  set entitiesSelected(value: Dictionary<Spell>) {
+    this._entitiesSelected = value;
+  }
+
   public _collection: Spell[];
   public _itemsSelected: Spell[];
+  public _entitiesSelected: Dictionary<Spell>;
 
   constructor(private store$: Store<RootStoreState.State>,
               private confirmationService: ConfirmationService) {
@@ -88,5 +95,9 @@ export class SpellListComponent implements OnInit {
 
   clear(table: Table): void {
     table.clear();
+  }
+
+  onChange(item: any): void {
+    this.store$.dispatch(SpellStoreActions.AddManySelected({items: [item]}));
   }
 }

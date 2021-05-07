@@ -5,6 +5,7 @@ import {Actions} from 'ngrx-entity-crud';
 import {Spell} from '@models/vo/spell';
 import {Observable} from 'rxjs';
 import {parseQueryString} from '@core/utils/j-utils';
+import {Dictionary} from '@ngrx/entity';
 
 @Component({
   selector: 'app-spell-main',
@@ -15,8 +16,10 @@ export class SpellMainComponent implements OnInit {
 
   collection$: Observable<Spell[]>;
   itemsSelected$: Observable<Spell[]>;
+  entitiesSelected$: Observable<Dictionary<Spell>>;
 
   constructor(private readonly store$: Store<RootStoreState.State>) {
+
   }
 
   actions: Actions<Spell> = SpellStoreActions.actions;
@@ -24,6 +27,10 @@ export class SpellMainComponent implements OnInit {
   ngOnInit(): void {
     this.itemsSelected$ = this.store$.pipe(
       select(SpellStoreSelectors.selectItemsSelected)
+    );
+
+    this.entitiesSelected$ = this.store$.pipe(
+      select(SpellStoreSelectors.selectEntitiesSelected)
     );
 
     this.collection$ = this.store$.select(

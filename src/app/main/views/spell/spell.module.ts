@@ -19,6 +19,7 @@ import {NgLetModule} from '@core/directive/ng-let.directive';
 import {ToolbarModule} from 'primeng/toolbar';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputNumberModule} from 'primeng/inputnumber';
+import {CheckboxModule} from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
@@ -30,22 +31,23 @@ import {InputNumberModule} from 'primeng/inputnumber';
     ButtonEditManyTestSpellComponent,
     ButtonCreateManyTestSpellComponent
   ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        SpellRoutingModule,
-        TableModule,
-        DialogModule,
-        ButtonModule,
-        InputTextModule,
-        PipesModule,
-        SearchModule,
-        NgLetModule,
-        ToolbarModule,
-        DropdownModule,
-        InputNumberModule
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SpellRoutingModule,
+    TableModule,
+    DialogModule,
+    ButtonModule,
+    InputTextModule,
+    PipesModule,
+    SearchModule,
+    NgLetModule,
+    ToolbarModule,
+    DropdownModule,
+    InputNumberModule,
+    CheckboxModule
+  ],
   providers: [],
   entryComponents: []
 })

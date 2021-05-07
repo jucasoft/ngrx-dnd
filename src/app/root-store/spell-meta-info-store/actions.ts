@@ -41,7 +41,12 @@ export const {
 
   Reset,
   Filters,
+
   SelectItems,
+  AddManySelected,
+  RemoveAllSelected,
+  RemoveManySelected,
+
   SelectItem,
   Edit,
   Create,

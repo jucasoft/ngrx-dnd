@@ -30,19 +30,19 @@
     "@ngrx/store": "^11.1.1",
     "@ngrx/store-devtools": "^11.1.1",
     "deepmerge": "^4.2.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
     "express-jwt-authz": "^2.4.1",
     "json-server": "^0.16.3",
     "jwks-rsa": "^2.0.3",
-    "ngrx-entity-crud": "^11.6.65",
+    "ngrx-entity-crud": "^11.8.2",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",
     "primeng": "^11.4.0",
     "rxjs": "~6.6.7",
     "tslib": "^2.2.0",
-    "zone.js": "~0.10.3",
-    "dotenv": "^8.2.0"
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1102.10",
